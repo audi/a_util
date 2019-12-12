@@ -1,0 +1,13 @@
+lib/liba_util_concurrency_x64_gnu54.a
+lib/liba_util_csv_reader_x64_gnu54.a
+lib/liba_util_datetime_x64_gnu54.a
+lib/liba_util_filesystem_x64_gnu54.a
+lib/liba_util_logging_x64_gnu54.a
+lib/liba_util_memory_x64_gnu54.a
+lib/liba_util_process_x64_gnu54.a
+lib/liba_util_regex_x64_gnu54.a
+lib/liba_util_result_x64_gnu54.a
+lib/liba_util_strings_x64_gnu54.a
+lib/liba_util_system_x64_gnu54.a
+lib/liba_util_variant_x64_gnu54.a
+lib/liba_util_xml_x64_gnu54.a

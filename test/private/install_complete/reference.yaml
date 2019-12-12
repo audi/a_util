@@ -1,0 +1,278 @@
+common:
+    files:
+        - 3rdparty/boost/boost_1_64_0/boost/current_function.hpp
+        - 3rdparty/clara/Clara-1.1.2/LICENSE.txt
+        - 3rdparty/clara/Clara-1.1.2/README.md
+        - 3rdparty/pcre/pcre-8.39/LICENCE
+        - 3rdparty/pugixml/pugixml-1.8/readme.txt
+        - 3rdparty/utfcpp/utf8_v2_3_4/source/utf8.h
+        - 3rdparty/uuid/uuid-1.6.2/license.txt
+        - MPL2.0.txt
+        - doc/changelog.md
+        - doc/license/MPL2.0.txt
+        - doc/license/licenses.txt
+        - doc/license/used_oss.md
+        - include/3rdparty/boost/boost_1_64_0/boost/current_function.hpp
+        - include/3rdparty/clara/Clara-1.1.2/single_include/clara.hpp
+        - include/a_util/base.h
+        - include/a_util/base/delegate.h
+        - include/a_util/base/detail/delegate_decl.h
+        - include/a_util/base/detail/delegate_impl.h
+        - include/a_util/base/types.h
+        - include/a_util/concurrency.h
+        - include/a_util/concurrency/atomic.h
+        - include/a_util/concurrency/chrono.h
+        - include/a_util/concurrency/condition_variable.h
+        - include/a_util/concurrency/detail/chrono_cxx11.h
+        - include/a_util/concurrency/detail/condition_variable_cxx11.h
+        - include/a_util/concurrency/detail/fast_mutex_decl.h
+        - include/a_util/concurrency/detail/fast_mutex_impl.h
+        - include/a_util/concurrency/detail/mutex_cxx11.h
+        - include/a_util/concurrency/detail/semaphore_decl.h
+        - include/a_util/concurrency/detail/semaphore_impl.h
+        - include/a_util/concurrency/detail/shared_mutex.h
+        - include/a_util/concurrency/detail/thread_cxx11.h
+        - include/a_util/concurrency/fast_mutex.h
+        - include/a_util/concurrency/mutex.h
+        - include/a_util/concurrency/semaphore.h
+        - include/a_util/concurrency/shared_mutex.h
+        - include/a_util/concurrency/thread.h
+        - include/a_util/datetime.h
+        - include/a_util/datetime/datetime.h
+        - include/a_util/filesystem.h
+        - include/a_util/filesystem/filesystem.h
+        - include/a_util/filesystem/path.h
+        - include/a_util/logging.h
+        - include/a_util/logging/log.h
+        - include/a_util/memory.h
+        - include/a_util/memory/detail/shared_ptr_cxx11.h
+        - include/a_util/memory/detail/stack_ptr_decl.h
+        - include/a_util/memory/detail/stack_ptr_impl.h
+        - include/a_util/memory/detail/unique_ptr_cxx11.h
+        - include/a_util/memory/memory.h
+        - include/a_util/memory/memorybuffer.h
+        - include/a_util/memory/shared_ptr.h
+        - include/a_util/memory/stack_ptr.h
+        - include/a_util/memory/unique_ptr.h
+        - include/a_util/parser.h
+        - include/a_util/parser/csv_reader.h
+        - include/a_util/process.h
+        - include/a_util/process/detail/process_impl.h
+        - include/a_util/process/process.h
+        - include/a_util/regex.h
+        - include/a_util/regex/regularexpression.h
+        - include/a_util/result.h
+        - include/a_util/result/detail/error_description_intf.h
+        - include/a_util/result/detail/reference_counted_object_intf.h
+        - include/a_util/result/detail/result_description_decl.h
+        - include/a_util/result/detail/result_description_impl.h
+        - include/a_util/result/detail/result_info_impl.h
+        - include/a_util/result/detail/result_type_impl.h
+        - include/a_util/result/error_def.h
+        - include/a_util/result/result_info.h
+        - include/a_util/result/result_info_decl.h
+        - include/a_util/result/result_type.h
+        - include/a_util/result/result_type_decl.h
+        - include/a_util/result/result_util.h
+        - include/a_util/strings.h
+        - include/a_util/strings/detail/strings_convert_impl.h
+        - include/a_util/strings/detail/strings_numeric_traits_impl.h
+        - include/a_util/strings/strings_convert.h
+        - include/a_util/strings/strings_convert_decl.h
+        - include/a_util/strings/strings_format.h
+        - include/a_util/strings/strings_functions.h
+        - include/a_util/strings/strings_numeric_traits.h
+        - include/a_util/strings/strings_numeric_traits_decl.h
+        - include/a_util/strings/unicode.h
+        - include/a_util/system.h
+        - include/a_util/system/detail/timer_impl.h
+        - include/a_util/system/system.h
+        - include/a_util/system/timer.h
+        - include/a_util/system/timer_decl.h
+        - include/a_util/system/uuid.h
+        - include/a_util/variant.h
+        - include/a_util/variant/variant.h
+        - include/a_util/xml.h
+        - include/a_util/xml/dom.h
+        - lib/cmake/3rdparty/clara-config-version.cmake
+        - lib/cmake/3rdparty/clara-config.cmake
+        - lib/cmake/a_util/a_util-config-version.cmake
+        - lib/cmake/a_util/a_util-config.cmake
+        - lib/cmake/a_util_base/a_util_base-config-version.cmake
+        - lib/cmake/a_util_base/a_util_base-config.cmake
+        - lib/cmake/a_util_concurrency/a_util_concurrency-config-version.cmake
+        - lib/cmake/a_util_concurrency/a_util_concurrency-config.cmake
+        - lib/cmake/a_util_concurrency/a_util_concurrency_targets.cmake
+        - lib/cmake/a_util_csv_reader/a_util_csv_reader-config-version.cmake
+        - lib/cmake/a_util_csv_reader/a_util_csv_reader-config.cmake
+        - lib/cmake/a_util_csv_reader/a_util_csv_reader_targets.cmake
+        - lib/cmake/a_util_datetime/a_util_datetime-config-version.cmake
+        - lib/cmake/a_util_datetime/a_util_datetime-config.cmake
+        - lib/cmake/a_util_datetime/a_util_datetime_targets.cmake
+        - lib/cmake/a_util_filesystem/a_util_filesystem-config-version.cmake
+        - lib/cmake/a_util_filesystem/a_util_filesystem-config.cmake
+        - lib/cmake/a_util_filesystem/a_util_filesystem_targets.cmake
+        - lib/cmake/a_util_logging/a_util_logging-config-version.cmake
+        - lib/cmake/a_util_logging/a_util_logging-config.cmake
+        - lib/cmake/a_util_logging/a_util_logging_targets.cmake
+        - lib/cmake/a_util_memory/a_util_memory-config-version.cmake
+        - lib/cmake/a_util_memory/a_util_memory-config.cmake
+        - lib/cmake/a_util_memory/a_util_memory_targets.cmake
+        - lib/cmake/a_util_process/a_util_process-config-version.cmake
+        - lib/cmake/a_util_process/a_util_process-config.cmake
+        - lib/cmake/a_util_process/a_util_process_targets.cmake
+        - lib/cmake/a_util_regex/a_util_regex-config-version.cmake
+        - lib/cmake/a_util_regex/a_util_regex-config.cmake
+        - lib/cmake/a_util_regex/a_util_regex_targets.cmake
+        - lib/cmake/a_util_result/a_util_result-config-version.cmake
+        - lib/cmake/a_util_result/a_util_result-config.cmake
+        - lib/cmake/a_util_result/a_util_result_targets.cmake
+        - lib/cmake/a_util_strings/a_util_strings-config-version.cmake
+        - lib/cmake/a_util_strings/a_util_strings-config.cmake
+        - lib/cmake/a_util_strings/a_util_strings_targets.cmake
+        - lib/cmake/a_util_system/a_util_system-config-version.cmake
+        - lib/cmake/a_util_system/a_util_system-config.cmake
+        - lib/cmake/a_util_system/a_util_system_targets.cmake
+        - lib/cmake/a_util_variant/a_util_variant-config-version.cmake
+        - lib/cmake/a_util_variant/a_util_variant-config.cmake
+        - lib/cmake/a_util_variant/a_util_variant_targets.cmake
+        - lib/cmake/a_util_xml/a_util_xml-config-version.cmake
+        - lib/cmake/a_util_xml/a_util_xml-config.cmake
+        - lib/cmake/a_util_xml/a_util_xml_targets.cmake
+        - README.md
+
+debug:
+    conditions:
+        deb: 
+            build_type: Debug
+    files:
+        - lib/cmake/a_util_concurrency/a_util_concurrency_targets-debug.cmake
+        - lib/cmake/a_util_csv_reader/a_util_csv_reader_targets-debug.cmake
+        - lib/cmake/a_util_datetime/a_util_datetime_targets-debug.cmake
+        - lib/cmake/a_util_filesystem/a_util_filesystem_targets-debug.cmake
+        - lib/cmake/a_util_logging/a_util_logging_targets-debug.cmake
+        - lib/cmake/a_util_memory/a_util_memory_targets-debug.cmake
+        - lib/cmake/a_util_process/a_util_process_targets-debug.cmake
+        - lib/cmake/a_util_regex/a_util_regex_targets-debug.cmake
+        - lib/cmake/a_util_result/a_util_result_targets-debug.cmake
+        - lib/cmake/a_util_strings/a_util_strings_targets-debug.cmake
+        - lib/cmake/a_util_system/a_util_system_targets-debug.cmake
+        - lib/cmake/a_util_variant/a_util_variant_targets-debug.cmake
+        - lib/cmake/a_util_xml/a_util_xml_targets-debug.cmake
+
+release:
+    conditions:
+        deb: 
+            build_type: Release
+    files:
+        - lib/cmake/a_util_concurrency/a_util_concurrency_targets-release.cmake
+        - lib/cmake/a_util_csv_reader/a_util_csv_reader_targets-release.cmake
+        - lib/cmake/a_util_datetime/a_util_datetime_targets-release.cmake
+        - lib/cmake/a_util_filesystem/a_util_filesystem_targets-release.cmake
+        - lib/cmake/a_util_logging/a_util_logging_targets-release.cmake
+        - lib/cmake/a_util_memory/a_util_memory_targets-release.cmake
+        - lib/cmake/a_util_process/a_util_process_targets-release.cmake
+        - lib/cmake/a_util_regex/a_util_regex_targets-release.cmake
+        - lib/cmake/a_util_result/a_util_result_targets-release.cmake
+        - lib/cmake/a_util_strings/a_util_strings_targets-release.cmake
+        - lib/cmake/a_util_system/a_util_system_targets-release.cmake
+        - lib/cmake/a_util_variant/a_util_variant_targets-release.cmake
+        - lib/cmake/a_util_xml/a_util_xml_targets-release.cmake
+
+linux_debug:
+    conditions:
+        lagd:
+            os: Linux
+            build_type: Debug
+    files:
+        - lib/liba_util_concurrencyd.a
+        - lib/liba_util_csv_readerd.a
+        - lib/liba_util_datetimed.a
+        - lib/liba_util_filesystemd.a
+        - lib/liba_util_loggingd.a
+        - lib/liba_util_memoryd.a
+        - lib/liba_util_processd.a
+        - lib/liba_util_regexd.a
+        - lib/liba_util_resultd.a
+        - lib/liba_util_stringsd.a
+        - lib/liba_util_systemd.a
+        - lib/liba_util_variantd.a
+        - lib/liba_util_xmld.a
+        
+
+linux_release:
+    conditions:
+        lagd:
+            os: Linux
+            build_type: Release
+    files:
+        - lib/liba_util_concurrency.a
+        - lib/liba_util_csv_reader.a
+        - lib/liba_util_datetime.a
+        - lib/liba_util_filesystem.a
+        - lib/liba_util_logging.a
+        - lib/liba_util_memory.a
+        - lib/liba_util_process.a
+        - lib/liba_util_regex.a
+        - lib/liba_util_result.a
+        - lib/liba_util_strings.a
+        - lib/liba_util_system.a
+        - lib/liba_util_variant.a
+        - lib/liba_util_xml.a
+
+windows:
+    conditions:
+        lagd:
+            os: Windows
+    files:
+        - scripts/debugging/result.natvis
+
+windows_debug:
+    conditions:
+        lagd:
+            os: Windows
+            build_type: Debug
+    files:
+        - lib/a_util_concurrencyd.lib
+        - lib/a_util_csv_readerd.lib
+        - lib/a_util_datetimed.lib
+        - lib/a_util_filesystemd.lib
+        - lib/a_util_loggingd.lib
+        - lib/a_util_memoryd.lib
+        - lib/a_util_processd.lib
+        - lib/a_util_regexd.lib
+        - lib/a_util_resultd.lib
+        - lib/a_util_stringsd.lib
+        - lib/a_util_systemd.lib
+        - lib/a_util_variantd.lib
+        - lib/a_util_xmld.lib
+
+windows_release:
+    conditions:
+        lagd:
+            os: Windows
+            build_type: Release
+    files:
+        - lib/a_util_concurrency.lib
+        - lib/a_util_csv_reader.lib
+        - lib/a_util_datetime.lib
+        - lib/a_util_filesystem.lib
+        - lib/a_util_logging.lib
+        - lib/a_util_memory.lib
+        - lib/a_util_process.lib
+        - lib/a_util_regex.lib
+        - lib/a_util_result.lib
+        - lib/a_util_strings.lib
+        - lib/a_util_system.lib
+        - lib/a_util_variant.lib
+        - lib/a_util_xml.lib
+
+documentation:
+    conditions:
+        doc_x86:
+            arch: x86
+        doc_x86_64:
+            arch: x86_64
+    files:
+        - doc/html/index.html
+        - doc/html/*
