@@ -454,7 +454,7 @@ Path& Path::makeCanonical()
                             end = cur;
                             break;
                         }
-                        else if (c == '.' && cur - 1 >= 0 && _impl->path[cur - 1] == '.')
+                        else if (c == '.' && cur >= 1 && _impl->path[cur - 1] == '.')
                         {
                             // we need to take care about more '..'
                             parts_to_skip++;
