@@ -22,6 +22,7 @@
 #define A_UTIL_UTIL_RESULT_DETAIL_RESULT_TYPE_IMPL_HEADER_INCLUDED
 
 #include <utility> //std::swap
+#include "a_util/base/types.h"  //a_util::maybe_unused
 #include "a_util/result/result_info.h"
 #include "a_util/result/detail/result_description_decl.h"
 #include "a_util/result/detail/result_description_impl.h"
@@ -49,6 +50,7 @@ template <typename ErrorType>
 inline Result::Result(const ResultInfo<ErrorType>& error)
     : _result_handle(DescriptionType::makeResultDescription(error.getCode()))
 {
+    a_util::maybe_unused(error);    // C4100
 }
 
 template <typename ErrorType>
@@ -59,6 +61,7 @@ inline Result::Result(ResultInfo<ErrorType> error,
                       const char* function)
     : _result_handle()
 {
+    a_util::maybe_unused(error);    // C4100
     *this = Result(error.getCode(),
                    error_description,
                    line,

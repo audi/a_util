@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.0.0)   #minimum for generated find scripts
 project(a_util_tests)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_EXTENSIONS OFF)   # we want standard compliant code without compiler extensions
 
 # Generator expressions take 0 as FALSE/OFF and 1 as TRUE/ON
 set(a_util_cmake_enable_integrated_tests 0 CACHE BOOL "" FORCE)

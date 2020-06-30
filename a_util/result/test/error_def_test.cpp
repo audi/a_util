@@ -21,7 +21,7 @@
 #include "gtest/gtest.h"
 #include "a_util/result/error_def.h"
 
-_MAKE_RESULT(666, TEST_ERROR)
+_MAKE_RESULT(666, TEST_ERROR);
 
 a_util::result::Result makeErrorAndGetFunctionName(std::string& function_name)
 {

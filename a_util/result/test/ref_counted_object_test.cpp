@@ -51,22 +51,22 @@ struct ReferencedObject : public ReferencedObjectInterface
     ReferencedObject& operator=(ReferencedObject&&) = delete;
 
     // tests std:forward
-    ReferencedObject(int max_instances) : max_instances(max_instances)
+    ReferencedObject(int max_instances) : _max_instances(max_instances)
     {
     }
 
     // tests const correct access via ref counter
     void setContent(int max_instances) override
     {
-        this->max_instances = max_instances;
+        this->_max_instances = max_instances;
     }
     int getContent() const override
     {
-        return this->max_instances;
+        return this->_max_instances;
     }
 
 private:
-    int max_instances;
+    int _max_instances;
 };
 
 /****************************** TEST *****************************/
