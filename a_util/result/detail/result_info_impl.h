@@ -21,6 +21,7 @@
 #ifndef A_UTIL_UTIL_RESULT_DETAIL_RESULT_INFO_IMPL_HEADER_INCLUDED
 #define A_UTIL_UTIL_RESULT_DETAIL_RESULT_INFO_IMPL_HEADER_INCLUDED
 
+#include "a_util/base/types.h"
 #include "a_util/result/result_info_decl.h"
 
 namespace a_util
@@ -65,6 +66,8 @@ inline const char* ResultInfo<void>::getLabel()
 template <typename ResultTypeLHS, typename ResultTypeRHS>
 inline bool operator==(const ResultInfo<ResultTypeLHS>& lhs, const ResultInfo<ResultTypeRHS>& rhs)
 {
+    a_util::maybe_unused(lhs);
+    a_util::maybe_unused(rhs);
     return (lhs.getCode() == rhs.getCode()) && (lhs.getLabel() == rhs.getLabel());
 }
 

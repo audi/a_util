@@ -9,6 +9,8 @@ target_include_directories(a_util_base
            $<INSTALL_INTERFACE:include>
 )
 
+target_compile_features(a_util_base INTERFACE cxx_std_11)
+
 install(TARGETS a_util_base
         EXPORT a_util_base
         ARCHIVE DESTINATION lib

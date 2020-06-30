@@ -41,7 +41,7 @@ target_include_directories(a_util_result
                            PUBLIC $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>
                                   $<INSTALL_INTERFACE:include>)
 
-target_link_libraries(a_util_result a_util_base a_util_concurrency a_util_strings)
+target_link_libraries(a_util_result PUBLIC a_util_base a_util_concurrency a_util_strings)
 
 set_target_properties(a_util_result PROPERTIES FOLDER a_util)
 

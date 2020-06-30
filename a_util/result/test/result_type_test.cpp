@@ -32,21 +32,21 @@
 /// Create the default success code which must be equal to global a_util::result::SUCCESS
 _MAKE_RESULT(0, SUCCESS);
 /// Create error type ERR_INVALID_ARG with numeric representation -5
-_MAKE_RESULT(-5, ERR_INVALID_ARG)
+_MAKE_RESULT(-5, ERR_INVALID_ARG);
 /// Create error type ERR_INVALID_ADDRESS with numeric representation -7
-_MAKE_RESULT(-7, ERR_INVALID_ADDRESS)
+_MAKE_RESULT(-7, ERR_INVALID_ADDRESS);
 /// Create error type ERR_MEMORY with numeric representation -12
-_MAKE_RESULT(-12, ERR_MEMORY)
+_MAKE_RESULT(-12, ERR_MEMORY);
 /// Create error type ERR_TIMEOUT with numeric representation -13
-_MAKE_RESULT(-13, ERR_TIMEOUT)
+_MAKE_RESULT(-13, ERR_TIMEOUT);
 /// Create error type ERR_NOT_SUPPORTED with numeric representation -19
-_MAKE_RESULT(-19, ERR_NOT_SUPPORTED)
+_MAKE_RESULT(-19, ERR_NOT_SUPPORTED);
 /// Create error type ERR_NOT_FOUND with numeric representation -20
-_MAKE_RESULT(-20, ERR_NOT_FOUND)
+_MAKE_RESULT(-20, ERR_NOT_FOUND);
 /// Create error type ERR_NOT_INITIALIZED with numeric representation -37
-_MAKE_RESULT(-37, ERR_NOT_INITIALIZED)
+_MAKE_RESULT(-37, ERR_NOT_INITIALIZED);
 /// Create error type ERR_FAILED with numeric representation -38
-_MAKE_RESULT(-38, ERR_FAILED)
+_MAKE_RESULT(-38, ERR_FAILED);
 
 using a_util::result::isFailed;
 using a_util::result::isOk;

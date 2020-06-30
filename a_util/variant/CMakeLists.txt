@@ -7,7 +7,7 @@ target_include_directories(a_util_variant
                            PUBLIC $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>
                                   $<INSTALL_INTERFACE:include>)
 
-target_link_libraries(a_util_variant a_util_base a_util_strings a_util_memory)
+target_link_libraries(a_util_variant PUBLIC a_util_base a_util_strings a_util_memory)
 
 set_target_properties(a_util_variant PROPERTIES FOLDER a_util)
 

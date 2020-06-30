@@ -35,6 +35,6 @@ target_include_directories(ref_counted_object_test
                            PRIVATE $<IF:${a_util_cmake_enable_integrated_tests},
                                         ${PROJECT_SOURCE_DIR},
                                         ${PROJECT_SOURCE_DIR}/..>)
-target_link_libraries(ref_counted_object_test PRIVATE GTest::Main)
+target_link_libraries(ref_counted_object_test PRIVATE GTest::Main a_util_base)
 add_test(ref_counted_object_test ref_counted_object_test)
 set_target_properties(ref_counted_object_test PROPERTIES FOLDER a_util/test/result)

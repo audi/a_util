@@ -168,47 +168,45 @@ public:
      */
     bool eraseAttribute(const std::string& name);
 
-    /**
-     * Finds a node based on a query.
-     *
-     * Some basic syntax:
-     *  - queries starting with '/' are starting at the root node
-     *  - use '*' to search all child nodes in the path
-     *  - if you search with absolute paths, don't forget to use the root node in the path.
-     *  - to search for certain attributes on nodes use [\@property0='value'] or [\@property0] to
-     * check the existence. Keep in mind that attributes search method will include parent (root)
-     * node in the elements list if search value match. In this case parent node will be the first
-     * element in the list.
-     *  - attributes can be concatenated to make them behave like an AND:
-     * [\@property0][\@property1='value']
-     *  - recursive search from root starts with '//nodes_to_search'. The whole tree is being
-     * searched.
-     *  - recursive search from current node starts with './/nodes_to_search'. The whole subtree is
-     * being searched.
-     *  - use 'and' or 'or' to connect multiple properties logically (USE ONLY ONE OPERATOR!)
-     *
-     * Here are some examples of search queries.
-     *  - /root/path/to/node                :absolute path to nodes
-     *  - path/to/node                      :search starting on current node. Same as above, if
-     * searched in root node.
-     *  - /root/node/*                      :find all children of all 'node' nodes
-     *  - *                                 :find all children of current node
-     *  - /root/node[\@prop='2']/*        :find all children of 'node' nodes with matching attribute
-     *
-     *  - //node                            :finds all 'node' nodes in the tree (recursive search)
-     *  - .//node                           :recursive search starting from current node
-     *  - //*[\@prop='2']                 :find all nodes in the tree with matching attributes
-     *  - /root/path/to[\@prop='2']//node :find all 'node' nodes in the subtree of the sub paths
-     * '/root/path/to'
-     *
-     *  - child/*[\@prop1='2']            :find all nodes in 'child' nodes with matching attributes
-     *
-     *  - *[\@prop1='3' and \@prop2='4']     :logical AND comparison for attributes
-     *
-     * @param[in] query The query string
-     * @param[out] element_ptr This will point to the found element
-     * @retval @c false if no matching node is found or the query is invalid, @c true otherwise
-     */
+    /// Finds a node based on a query.
+    ///
+    /// Some basic syntax:
+    ///  - queries starting with '/' are starting at the root node
+    ///  - use '*' to search all child nodes in the path
+    ///  - if you search with absolute paths, don't forget to use the root node in the path.
+    ///  - to search for certain attributes on nodes use [\@property0='value'] or [\@property0] to
+    /// check the existence. Keep in mind that attributes search method will include parent (root)
+    /// node in the elements list if search value match. In this case parent node will be the first
+    /// element in the list.
+    ///  - attributes can be concatenated to make them behave like an AND:
+    /// [\@property0][\@property1='value']
+    ///  - recursive search from root starts with '//nodes_to_search'. The whole tree is being
+    /// searched.
+    ///  - recursive search from current node starts with './/nodes_to_search'. The whole subtree is
+    /// being searched.
+    ///  - use 'and' or 'or' to connect multiple properties logically (USE ONLY ONE OPERATOR!)
+    ///
+    /// Here are some examples of search queries.
+    ///  - /root/path/to/node                :absolute path to nodes
+    ///  - path/to/node                      :search starting on current node. Same as above, if
+    /// searched in root node.
+    ///  - /root/node/*                      :find all children of all 'node' nodes
+    ///  - *                                 :find all children of current node
+    ///  - /root/node[\@prop='2']/*        :find all children of 'node' nodes with matching attribute
+    ///
+    ///  - //node                            :finds all 'node' nodes in the tree (recursive search)
+    ///  - .//node                           :recursive search starting from current node
+    ///  - //*[\@prop='2']                 :find all nodes in the tree with matching attributes
+    ///  - /root/path/to[\@prop='2']//node :find all 'node' nodes in the subtree of the sub paths
+    /// '/root/path/to'
+    ///
+    ///  - child/*[\@prop1='2']            :find all nodes in 'child' nodes with matching attributes
+    ///
+    ///  - *[\@prop1='3' and \@prop2='4']     :logical AND comparison for attributes
+    ///
+    /// @param[in] query The query string
+    /// @param[out] element_ptr This will point to the found element
+    /// @retval @c false if no matching node is found or the query is invalid, @c true otherwise
     bool findNode(const std::string& query, DOMElement& element_ptr) const;
 
     /**

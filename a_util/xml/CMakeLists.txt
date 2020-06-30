@@ -13,7 +13,7 @@ target_include_directories(a_util_xml
                                   $<INSTALL_INTERFACE:include>
                            PRIVATE ${PUGI_DIR}/src)
                            
-target_link_libraries(a_util_xml a_util_base)
+target_link_libraries(a_util_xml PUBLIC a_util_base)
 
 set_target_properties(a_util_xml PROPERTIES FOLDER a_util)
 

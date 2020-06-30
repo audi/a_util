@@ -38,4 +38,16 @@ typedef std::atomic_int_fast64_t atomic_timestamp_t;
 typedef std::atomic<timestamp_t> atomic_timestamp_t;
 #endif
 
+namespace a_util
+{
+
+/**
+ * Mimics C++17 attribute @c maybe_unused to silence compiler warns on potentially unused enitities
+ * @tparam T Type of the potentially unused entity
+ */
+template<typename T>
+void maybe_unused(T&&) {}
+
+}
+
 #endif /* A_UTIL_UTIL_BASE_TYPES_H */

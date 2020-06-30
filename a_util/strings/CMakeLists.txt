@@ -34,7 +34,7 @@ target_include_directories(a_util_strings
                            PUBLIC $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>
                                   $<INSTALL_INTERFACE:include>)
 
-target_link_libraries(a_util_strings a_util_base)
+target_link_libraries(a_util_strings PUBLIC a_util_base)
 
 set_target_properties(a_util_strings PROPERTIES FOLDER a_util)
 

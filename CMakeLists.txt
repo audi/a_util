@@ -1,16 +1,33 @@
 cmake_minimum_required(VERSION 3.10.0)
 
-# Since CMAKE_CXX_COMPILER_ID is not available before project()
-# we cannot determine the required CMAKE_CXX_STANDARD automatically.
-# CMAKE_CXX_STANDARD needs to be set from outside, e.g. from a conan recipe
+# Start project() now, since any include checks will use the correct compiler flags
+project(a_util_library VERSION 5.6.1)
 
 # Disable extensions here and require the chosen CMAKE_CXX_STANDARD
 set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_STANDARD 11)
 
-# Start project() now, since any include checks will use the correct compiler flags
-project(a_util_library VERSION 5.6.0)
+# Use conan if available
+if(CONAN_COMPILER)
+    if ( EXISTS ${CMAKE_CURRENT_BINARY_DIR}/conanbuildinfo.cmake)
+    		include(${CMAKE_CURRENT_BINARY_DIR}/conanbuildinfo.cmake)
+    	elseif ( EXISTS ${CMAKE_CURRENT_BINARY_DIR}/../conanbuildinfo.cmake)
+    		include(${CMAKE_CURRENT_BINARY_DIR}/../conanbuildinfo.cmake)
+    	elseif ( EXISTS ${CMAKE_CURRENT_BINARY_DIR}/conanbuildinfo_multi.cmake)
+    		include(${CMAKE_CURRENT_BINARY_DIR}/conanbuildinfo_multi.cmake)
+    	elseif ( EXISTS ${CMAKE_CURRENT_BINARY_DIR}/../conanbuildinfo_multi.cmake)
+    		include(${CMAKE_CURRENT_BINARY_DIR}/../conanbuildinfo_multi.cmake)
+    	else()
+    		message(FATAL_ERROR "Conan build info can't be found.")
+    	endif()
+
+    	if(CORTEX_WORKSPACE)
+    		conan_basic_setup(TARGETS)
+    	else()
+    		conan_basic_setup(TARGETS NO_OUTPUT_DIRS)
+    	endif()
+endif()
 
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 ##check for default install prefix and cmake build type
@@ -39,26 +56,6 @@ option(a_util_cmake_enable_integrated_tests
 if(a_util_cmake_enable_integrated_tests)
     # Generator expressions take 0 as FALSE/OFF and 1 as TRUE/ON
     set(a_util_cmake_enable_integrated_tests 1 CACHE BOOL "" FORCE)
-    # Use conan if available
-    if(CONAN_COMPILER)
-        if ( EXISTS ${CMAKE_CURRENT_BINARY_DIR}/conanbuildinfo.cmake)
-			include(${CMAKE_CURRENT_BINARY_DIR}/conanbuildinfo.cmake)
-		elseif ( EXISTS ${CMAKE_CURRENT_BINARY_DIR}/../conanbuildinfo.cmake)
-			include(${CMAKE_CURRENT_BINARY_DIR}/../conanbuildinfo.cmake)
-		elseif ( EXISTS ${CMAKE_CURRENT_BINARY_DIR}/conanbuildinfo_multi.cmake)
-			include(${CMAKE_CURRENT_BINARY_DIR}/conanbuildinfo_multi.cmake)
-		elseif ( EXISTS ${CMAKE_CURRENT_BINARY_DIR}/../conanbuildinfo_multi.cmake)
-			include(${CMAKE_CURRENT_BINARY_DIR}/../conanbuildinfo_multi.cmake)
-		else()
-			message(FATAL_ERROR "Conan build info can't be found.")
-		endif()
-
-		if(CORTEX_WORKSPACE)
-			conan_basic_setup(TARGETS)
-		else()
-			conan_basic_setup(TARGETS NO_OUTPUT_DIRS)
-		endif()
-    endif()
 
     #ignore find_package calls inside the source tree from a_util components
     macro(find_package)

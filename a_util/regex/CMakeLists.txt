@@ -58,7 +58,7 @@ target_include_directories(a_util_regex
     PRIVATE ${PCRE_CUSTOM_BINARY_DIR} ${PCRE_DIR}
 )
 
-target_link_libraries(a_util_regex a_util_base a_util_memory)
+target_link_libraries(a_util_regex PUBLIC a_util_base a_util_memory)
 
 set_target_properties(a_util_regex PROPERTIES FOLDER a_util)
 

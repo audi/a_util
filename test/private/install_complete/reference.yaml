@@ -179,10 +179,13 @@ release:
         - lib/cmake/a_util_variant/a_util_variant_targets-release.cmake
         - lib/cmake/a_util_xml/a_util_xml_targets-release.cmake
 
-linux_debug:
+linux_and_qnx_debug:
     conditions:
-        lagd:
+        lagd_linux:
             os: Linux
+            build_type: Debug
+        lagd_neutrino:
+            os: Neutrino
             build_type: Debug
     files:
         - lib/liba_util_concurrencyd.a
@@ -200,10 +203,13 @@ linux_debug:
         - lib/liba_util_xmld.a
         
 
-linux_release:
+linux_and_qnx_release:
     conditions:
-        lagd:
+        lagd_linux:
             os: Linux
+            build_type: Release
+        lagd_neutrino:
+            os: Neutrino
             build_type: Release
     files:
         - lib/liba_util_concurrency.a

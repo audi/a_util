@@ -5,6 +5,21 @@ For upcoming features and known issues see the bottom of this file.
 
 The format is based on [Keep a Changelog][] and this project adheres to [Semantic Versioning][].
 
+## [5.6.1][] - 2020-02-12 ##
+### Changes ###
+- [ODAUTIL-163] -
+  Extend Jenkinsfile for cross platform build of QNX target on Windows host
+
+### Fixes ###
+- [ODAUTIL-105] -
+  [Result] Warning "unreferenced formal parameter" arises when including result_type_impl.h
+- [ODAUTIL-157] - 
+  \[BuildSystem\] Language standard C++11 is not propagated
+- [ODAUTIL-168] -
+  \[Result\] Macros cannot be used with a closing semicolon without compiler warning
+- [ODAUTIL-169] -
+  Function findNode of dom.h raises `-Werror=comment` warning on gcc
+
 ## [5.6.0] - 2019-09-06 ##
 - initial commit for github
 

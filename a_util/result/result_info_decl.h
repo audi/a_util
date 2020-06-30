@@ -43,7 +43,8 @@
         }                                                                                          \
     };                                                                                             \
     const ::a_util::result::ResultInfo<ResultType_##_label> _label = ResultType_##_label();        \
-    }
+    }                                                                                              \
+    static_assert(sizeof(ResultType_##_label) == 1, "Empty base optimization does not kick in?")
 
 namespace a_util
 {
