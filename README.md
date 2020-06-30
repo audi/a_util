@@ -45,6 +45,9 @@ The libraries are currently built and tested using the following compilers and o
 - Use CMakeLists.txt within the main directory as source directory
 - Do not forget to set `CMAKE_INSTALL_PREFIX`
 - Build and install for Debug and RelWithDebInfo
+- Command line for e.g. Windows
+> cmake <source directory> -H<source directory> -B<build directory> -G "Visual Studio 15 2017 Win64" -T v140 -DCMAKE_INSTALL_PREFIX=<install directory> -Da_util_cmake_enable_integrated_tests=ON -DGTEST_DIR=<GTest directory> -DGTEST_LIBRARY=<GTest directory>/lib/gtest.lib -DGTEST_INCLUDE_DIR=<GTest directory>/include -DGTEST_MAIN_LIBRARY=<GTest directory>/lib/gtest_main.lib -DDOXYGEN_EXECUTABLE=<doxygen binary directory>/doxygen.exe -DDOXYGEN_DOT_EXECUTABLE=<graphviz binary directory>/dot.exe
+
 
 #### Optional requirements 
 
